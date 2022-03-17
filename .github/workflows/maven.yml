@@ -27,7 +27,7 @@ jobs:
     - name: Test with Maven
       run: mvn test
       
-    - name: Login to Heroku Container registry
-      env: 
+    - name: Release
+      env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:login 
+      run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web 
