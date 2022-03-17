@@ -2,7 +2,7 @@ package app;
 import io.jooby.annotations.*;
 import io.jooby.exception.BadRequestException;
 
-public class Subtracao{
+public class Subtracao {
 
     @Path("/sub/{op1}/{op2}")
     @GET

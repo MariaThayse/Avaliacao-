@@ -2,8 +2,7 @@ package app;
 import io.jooby.annotations.*;
 import io.jooby.exception.BadRequestException;
 
-public class Soma{
-
+public class Soma {
     @Path("/soma/{op1}/{op2}")
     @GET
     public String rotaSoma(@PathParam double op1, @PathParam double op2){
@@ -13,6 +12,6 @@ public class Soma{
         }catch(NumberFormatException nfe){
             throw new BadRequestException(String.format("Valores inválidos"));
         }
-        
-    }
+
+}
 }
