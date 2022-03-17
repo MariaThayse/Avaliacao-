@@ -8,9 +8,9 @@
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+    
  jobs:
-  build:
+   build:
 
     runs-on: ubuntu-latest
 
@@ -22,8 +22,9 @@
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+        
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package 
       
     - name: Test with Maven
       run: mvn test
