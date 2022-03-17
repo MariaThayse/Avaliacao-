@@ -4,7 +4,7 @@ import io.jooby.exception.BadRequestException;
 
 public class Subtracao {
     
-    @Path("/subtracao/{x}/{y}")
+    @Path("/subtracao/{x}/{y}") //forma da subtração
     @GET
 
        public String rotaSubtracao(@PathParam String x, String y ) {

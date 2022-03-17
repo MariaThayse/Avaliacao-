@@ -4,7 +4,7 @@ import io.jooby.exception.BadRequestException;
 
 public class Soma {
 
-        @Path("/soma/{x}/{y}")
+        @Path("/soma/{x}/{y}") //forma da soma
         @GET
     
            public String rotaSoma(@PathParam String x, String y ) {
