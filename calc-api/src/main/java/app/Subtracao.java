@@ -3,15 +3,16 @@ import io.jooby.annotations.*;
 import io.jooby.exception.BadRequestException;
 
 public class Subtracao {
-
-    @Path("/sub/{op1}/{op2}")
+    
+    @Path("/subtracao/{x}/{y}")
     @GET
-    public String rotaSub(@PathParam double op1, @PathParam double op2){
-        try{
-            return String.format("%.2f", op1-op2);
-        }catch(NumberFormatException nfe){
-            throw new BadRequestException(String.format("Valores inválidos"));
+
+       public String rotaSubtracao(@PathParam String x, String y ) {
+        try {
+            Double z = Double.parseDouble(x) - Double.parseDouble(y);
+            return String.format("%.2f", z);
+        } catch (NumberFormatException nfe) {
+            throw new BadRequestException(String.format("Parâmetro inválido:\"%s\"", x,y));
         }
-        
     }
 }
