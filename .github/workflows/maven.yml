@@ -33,8 +33,3 @@
     - name: Test with Maven
       run: mvn test
 
-    - name: Build and push
-     
-
-    - name: Release
-   
